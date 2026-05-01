@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Sidebar from '../components/portfolio/Sidebar';
 import HeroSection from '../components/portfolio/HeroSection';
 import StatsCards from '../components/portfolio/StatsCards';
@@ -19,13 +19,22 @@ import WelcomeModal from '../components/portfolio/WelcomeModal';
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
   const [openWidget, setOpenWidget] = useState(false);
+  const mainRef = useRef(null);
+
+  useEffect(() => {
+    mainRef.current?.scrollTo({ top: 0, behavior: 'instant' });
+  }, [activeSection]);
+
+  const handleNav = (section) => {
+    setActiveSection(section);
+  };
 
   const renderSection = () => {
     switch (activeSection) {
       case 'home':
         return (
           <div className="space-y-16">
-            <HeroSection onNav={setActiveSection} />
+            <HeroSection onNav={handleNav} />
             <StatsCards />
             <About />
             <TechnicalSkills />
@@ -74,8 +83,8 @@ export default function Portfolio() {
 
   return (
     <div className="h-screen flex overflow-hidden" style={{background:'#0D1117'}}>
-      <Sidebar active={activeSection} onNav={setActiveSection} />
-      <main className="flex-1 md:ml-[220px] overflow-y-auto">
+      <Sidebar active={activeSection} onNav={handleNav} />
+      <main ref={mainRef} className="flex-1 md:ml-[220px] overflow-y-auto">
         <div className="max-w-[1100px] mx-auto px-6 md:px-8 py-8">
           {renderSection()}
         </div>
