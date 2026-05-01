@@ -83,7 +83,9 @@ function ChatPanel() {
           <motion.div key={i} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
             className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-end gap-1.5`}>
             {msg.role === 'assistant' && (
-              <div className="w-5 h-5 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white text-[8px] font-bold flex-shrink-0">JS</div>
+              <div className="w-6 h-6 rounded-full overflow-hidden flex-shrink-0 bg-white/5 p-0.5">
+                <img src="/logo.png" alt="logo" className="w-full h-full object-contain" />
+              </div>
             )}
             <div className={`max-w-[80%] px-3 py-2 rounded-2xl text-xs leading-relaxed ${
               msg.role === 'user'
@@ -94,7 +96,9 @@ function ChatPanel() {
         ))}
         {typing && (
           <div className="flex items-end gap-1.5">
-            <div className="w-5 h-5 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white text-[8px] font-bold">JS</div>
+            <div className="w-6 h-6 rounded-full overflow-hidden flex-shrink-0 bg-white/5 p-0.5">
+              <img src="/logo.png" alt="logo" className="w-full h-full object-contain" />
+            </div>
             <div className="bg-white/10 border border-white/10 rounded-2xl rounded-bl-sm px-3 py-2 flex gap-1">
               {[0,1,2].map(i => (
                 <motion.span key={i} className="w-1 h-1 rounded-full bg-slate-400"
@@ -292,7 +296,9 @@ export default function FloatingWidget({ forceOpen = false }) {
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-gradient-to-r from-indigo-500/10 to-pink-500/10">
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white text-[10px] font-bold">JS</div>
+                <div className="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0 bg-white/5 p-0.5">
+                  <img src="/logo.png" alt="logo" className="w-full h-full object-contain" />
+                </div>
                 <div>
                   <p className="text-white text-xs font-semibold">Jogi's AI Assistant</p>
                   <div className="flex items-center gap-1 text-[10px] text-slate-400">

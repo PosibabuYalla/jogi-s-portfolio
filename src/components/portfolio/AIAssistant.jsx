@@ -69,7 +69,9 @@ export default function AIAssistant() {
 
       <div className="glass-card-solid overflow-hidden">
         <div className="flex items-center gap-3 px-5 py-4 border-b border-gray-100 bg-gradient-to-r from-intelligence to-slate-800">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white text-xs font-bold">JS</div>
+          <div className="w-9 h-9 rounded-xl overflow-hidden flex-shrink-0 bg-white/5 p-0.5">
+            <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
+          </div>
           <div>
             <p className="text-white text-sm font-semibold">AI ASSISTANT (Ask Me!)</p>
             <p className="flex items-center gap-1.5 text-xs text-slate-400">
@@ -87,7 +89,9 @@ export default function AIAssistant() {
                 className={`flex items-end gap-2 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 {msg.role === 'assistant' && (
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white text-[9px] font-bold flex-shrink-0">JS</div>
+                  <div className="w-7 h-7 rounded-full overflow-hidden flex-shrink-0 bg-white/5 p-0.5">
+                    <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
+                  </div>
                 )}
                 <div className={`max-w-[75%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
                   msg.role === 'user'
@@ -100,7 +104,9 @@ export default function AIAssistant() {
             ))}
             {typing && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-end gap-2">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white text-[9px] font-bold">JS</div>
+                <div className="w-7 h-7 rounded-full overflow-hidden flex-shrink-0 bg-white/5 p-0.5">
+                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
+              </div>
                 <div className="bg-white border border-gray-100 shadow-sm rounded-2xl rounded-bl-sm">
                   <TypingDots />
                 </div>

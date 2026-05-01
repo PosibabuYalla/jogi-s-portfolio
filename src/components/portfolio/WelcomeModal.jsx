@@ -88,8 +88,8 @@ export default function WelcomeModal({ onOpenWidget }) {
                         transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
                         className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500/40 to-pink-500/40 blur-xl"
                       />
-                      <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-indigo-500 via-pink-500 to-amber-400 flex items-center justify-center shadow-2xl border-2 border-white/10">
-                        <span className="text-white font-extrabold text-xl">JS</span>
+                      <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-2xl border-2 border-white/10 bg-white/5 p-1">
+                        <img src="/logo.png" alt="logo" className="w-full h-full object-contain" />
                       </div>
                       <motion.div
                         animate={{ rotate: 360 }}

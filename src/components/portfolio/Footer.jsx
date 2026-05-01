@@ -18,7 +18,6 @@ export default function Footer() {
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
         <div className="text-center sm:text-left space-y-1">
           <p>© 2025 Joginaidu Surla. All rights reserved.</p>
-          <p>Built with ❤️ and lots of ☕</p>
         </div>
         <div className="flex items-center gap-4">
           <a href="https://github.com/Jo9gi" target="_blank" rel="noreferrer" className="hover:text-indigo-400 transition-colors"><GithubIcon /></a>

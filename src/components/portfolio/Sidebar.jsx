@@ -34,9 +34,7 @@ function SidebarContent({ active, onNav }) {
   return (
     <div className="flex flex-col h-full py-6 px-4">
       <div className="flex items-center gap-3 mb-8 px-2">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-synapse to-latent flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-          JS
-        </div>
+        <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-xl object-contain bg-white/5 p-1 flex-shrink-0" />
         <div>
           <p className="text-white font-semibold text-xs leading-tight">JOGINAIDU SURLA</p>
           <p className="text-pink-400 text-[10px] font-medium tracking-wide">AI/ML ENGINEER</p>
