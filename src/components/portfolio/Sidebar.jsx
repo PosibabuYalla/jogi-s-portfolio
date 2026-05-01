@@ -72,9 +72,13 @@ function SidebarContent({ active, onNav }) {
             <Mail size={18} />
           </a>
         </div>
-        <button className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 via-pink-500 to-amber-400 text-white text-sm font-medium hover:opacity-90 transition-opacity">
+        <a
+          href="/Joginaidu_Surla.pdf"
+          download="Joginaidu_Surla.pdf"
+          className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 via-pink-500 to-amber-400 text-white text-sm font-medium hover:opacity-90 transition-opacity"
+        >
           <Download size={14} /> Download CV
-        </button>
+        </a>
       </div>
     </div>
   );
